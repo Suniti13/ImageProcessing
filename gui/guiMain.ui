@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1093</width>
+    <height>667</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Image Processing</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="inputImageLabel">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>531</width>
+      <height>531</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="outputImageLabel">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>10</y>
+      <width>531</width>
+      <height>531</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="msgLabel">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>560</y>
+      <width>1071</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Open Image</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1093</width>
+     <height>36</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionOpen"/>
+    <addaction name="actionSave"/>
+   </widget>
+   <widget class="QMenu" name="menuExpt2">
+    <property name="title">
+     <string>Expt2</string>
+    </property>
+    <addaction name="actionRGB_to_Grey"/>
+   </widget>
+   <widget class="QMenu" name="menuExpt3">
+    <property name="title">
+     <string>Expt3</string>
+    </property>
+    <addaction name="actionNegative"/>
+   </widget>
+   <widget class="QMenu" name="menuExpt4">
+    <property name="title">
+     <string>Expt4</string>
+    </property>
+    <addaction name="actionGrey_Level_Slicing"/>
+   </widget>
+   <widget class="QMenu" name="menuExpt5">
+    <property name="title">
+     <string>Expt5</string>
+    </property>
+    <addaction name="actionBit_Plane_0"/>
+    <addaction name="actionBit_Plane_1"/>
+    <addaction name="actionBit_Plane_2"/>
+    <addaction name="actionBit_Plane_3"/>
+    <addaction name="actionBit_Plane_4"/>
+    <addaction name="actionBit_Plane_5"/>
+    <addaction name="actionBit_Plane_6"/>
+    <addaction name="actionBit_Plane_7"/>
+   </widget>
+   <widget class="QMenu" name="menuExpt6">
+    <property name="title">
+     <string>Expt6</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuExpt7">
+    <property name="title">
+     <string>Expt7</string>
+    </property>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuExpt2"/>
+   <addaction name="menuExpt3"/>
+   <addaction name="menuExpt4"/>
+   <addaction name="menuExpt5"/>
+   <addaction name="menuExpt6"/>
+   <addaction name="menuExpt7"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionOpen">
+   <property name="text">
+    <string>Open</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+   <property name="shortcutContext">
+    <enum>Qt::WidgetShortcut</enum>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="text">
+    <string>Save</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionRGB_to_Grey">
+   <property name="text">
+    <string>RGB to Grey</string>
+   </property>
+  </action>
+  <action name="actionNegative">
+   <property name="text">
+    <string>Negative</string>
+   </property>
+  </action>
+  <action name="actionWith_Background">
+   <property name="text">
+    <string>With Background</string>
+   </property>
+  </action>
+  <action name="actionWithout_Background">
+   <property name="text">
+    <string>Without Background</string>
+   </property>
+  </action>
+  <action name="actionBit_Plane_0">
+   <property name="text">
+    <string>Bit Plane 0</string>
+   </property>
+  </action>
+  <action name="actionBit_Plane_1">
+   <property name="text">
+    <string>Bit Plane 1</string>
+   </property>
+  </action>
+  <action name="actionBit_Plane_2">
+   <property name="text">
+    <string>Bit Plane 2</string>
+   </property>
+  </action>
+  <action name="actionBit_Plane_3">
+   <property name="text">
+    <string>Bit Plane 3</string>
+   </property>
+  </action>
+  <action name="actionBit_Plane_4">
+   <property name="text">
+    <string>Bit Plane 4</string>
+   </property>
+  </action>
+  <action name="actionBit_Plane_5">
+   <property name="text">
+    <string>Bit Plane 5</string>
+   </property>
+  </action>
+  <action name="actionBit_Plane_6">
+   <property name="text">
+    <string>Bit Plane 6</string>
+   </property>
+  </action>
+  <action name="actionBit_Plane_7">
+   <property name="text">
+    <string>Bit Plane 7</string>
+   </property>
+  </action>
+  <action name="actionGrey_Level_Slicing">
+   <property name="text">
+    <string>Grey Level Slicing</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
