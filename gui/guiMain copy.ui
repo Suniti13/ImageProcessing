@@ -76,13 +76,13 @@
     <addaction name="actionOpen"/>
     <addaction name="actionSave"/>
    </widget>
-   <widget class="QMenu" name="menuExpt1">
+   <widget class="QMenu" name="menuExpt2">
     <property name="title">
      <string>Expt2</string>
     </property>
     <addaction name="actionRGB_to_Grey"/>
    </widget>
-   <widget class="QMenu" name="menuExpt2">
+   <widget class="QMenu" name="menuExpt3">
     <property name="title">
      <string>Expt3</string>
     </property>
@@ -94,9 +94,9 @@
     </property>
     <addaction name="actionGrey_Level_Slicing"/>
    </widget>
-   <widget class="QMenu" name="menuExpt6">
+   <widget class="QMenu" name="menuExpt5">
     <property name="title">
-     <string>Expt6</string>
+     <string>Expt5</string>
     </property>
     <addaction name="actionBit_Plane_0"/>
     <addaction name="actionBit_Plane_1"/>
@@ -107,23 +107,26 @@
     <addaction name="actionBit_Plane_6"/>
     <addaction name="actionBit_Plane_7"/>
    </widget>
-   <widget class="QMenu" name="menuExpt7">
+   <widget class="QMenu" name="menuExpt6">
     <property name="title">
      <string>Expt7</string>
     </property>
+    <addaction name="actionHistogram_Equalization"/>
+    <addaction name="actionGenerate_Histograms"/>
    </widget>
-   <widget class="QMenu" name="menuExpt8">
+   <widget class="QMenu" name="menuExpt7">
     <property name="title">
-     <string>Expt8</string>
+     <string>Expt6</string>
     </property>
+    <addaction name="actionContrast_Stretching"/>
    </widget>
    <addaction name="menuFile"/>
-   <addaction name="menuExpt1"/>
    <addaction name="menuExpt2"/>
+   <addaction name="menuExpt3"/>
    <addaction name="menuExpt4"/>
-   <addaction name="menuExpt6"/>
+   <addaction name="menuExpt5"/>
    <addaction name="menuExpt7"/>
-   <addaction name="menuExpt8"/>
+   <addaction name="menuExpt6"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionOpen">
@@ -208,6 +211,21 @@
   <action name="actionGrey_Level_Slicing">
    <property name="text">
     <string>Grey Level Slicing</string>
+   </property>
+  </action>
+  <action name="actionHistogram_Equalization">
+   <property name="text">
+    <string>Histogram Equalization</string>
+   </property>
+  </action>
+  <action name="actionGenerate_Histograms">
+   <property name="text">
+    <string>Generate Histograms</string>
+   </property>
+  </action>
+  <action name="actionContrast_Stretching">
+   <property name="text">
+    <string>Contrast Stretching</string>
    </property>
   </action>
  </widget>

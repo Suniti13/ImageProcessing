@@ -8,8 +8,7 @@ def convert_to_greyscale(img):
 
     for i in range(r):
         for j in range(c):
-            grey = (0.3*image_arr[i][j][0]) + (0.59*image_arr[i][j][1]) + 
-                        (0.11*image_arr[i][j][2])
+            grey = (0.3*image_arr[i][j][0]) + (0.59*image_arr[i][j][1]) + (0.11*image_arr[i][j][2])
             for k in range(3):
                 image_arr[i][j][k] = grey
     
