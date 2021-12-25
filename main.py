@@ -12,8 +12,9 @@ from E2_color_to_grey import convert_to_greyscale
 from E3_negative import convert_to_negative
 from E4_grey_level_slicing import grey_level_slicing
 from E5_bit_plane_slicing import convert_to_bit_plane_slicing
-from E6_histogram_equalization import histogram_eq, plot_histogram
-from E7_contrast_stretching import contrast_stretching
+from E6_contrast_stretching import contrast_stretching
+from E7_histogram_equalization import histogram_eq, plot_histogram
+from E8_smoothening import applyBoxFilter, applyMedianFilter, applyWeightedAvgFilter
 
 #from handleImageFile import showInputImage, showOutputImage
 
@@ -52,6 +53,12 @@ class Window(QMainWindow, Ui_MainWindow):
         self.actionGenerate_Histograms.triggered.connect(lambda: self.plotHistogram())
 
         self.actionContrast_Stretching.triggered.connect(lambda: self.contrastStretching())
+
+        self.actionSmoothing_Box_Filter.triggered.connect(lambda: self.boxFilter())
+        self.actionSmoothing_Median_Filter.triggered.connect(lambda: self.medianFilter())
+        self.actionSmoothing_Weighted_Averaging_Filter.triggered.connect(lambda: self.weightedAvgFilter())
+
+
 
     def openImage(self):
         print("Open Image triggered")
@@ -115,6 +122,11 @@ class Window(QMainWindow, Ui_MainWindow):
         self.showOutputImage()
 
     #E6
+    def contrastStretching(self):
+        self.outputImage = contrast_stretching(self.inputImagePIL)
+        self.showOutputImage("Contrast Stretching")
+
+    #E7
     def histogramEq(self):
         self.outputImage, self.initialHist, self.finalHist = histogram_eq(self.inputImagePIL)
         self.showOutputImage()
@@ -122,10 +134,19 @@ class Window(QMainWindow, Ui_MainWindow):
     def plotHistogram(self):
         plot_histogram(self.initialHist, self.finalHist)
 
-    #E7
-    def contrastStretching(self):
-        self.outputImage = contrast_stretching(self.inputImagePIL)
-        self.showOutputImage("Contrast Stretching")
+    #E8 : Image Smoothening
+    def boxFilter(self):
+        self.outputImage = applyBoxFilter(self.inputImagePIL)
+        self.showOutputImage("Box Filter")
+    
+    def medianFilter(self):
+        self.outputImage = applyMedianFilter(self.inputImagePIL)
+        self.showOutputImage("Median Filter")
+    
+    def weightedAvgFilter(self):
+        self.outputImage = applyWeightedAvgFilter(self.inputImagePIL)
+        self.showOutputImage("Weighted Averaging Filter")
+    
 
 
        

@@ -120,6 +120,28 @@
     </property>
     <addaction name="actionContrast_Stretching"/>
    </widget>
+   <widget class="QMenu" name="menuExpt8">
+    <property name="title">
+     <string>Expt8</string>
+    </property>
+    <addaction name="actionSmoothing_Box_Filter"/>
+    <addaction name="actionSmoothing_Median_Filter"/>
+    <addaction name="actionSmoothing_Weighted_Averaging_Filter"/>
+   </widget>
+   <widget class="QMenu" name="menuExpt9">
+    <property name="title">
+     <string>Expt9</string>
+    </property>
+    <addaction name="actionSharpening_Laplacian_Filter"/>
+    <addaction name="actionSharpening_Sobel_Filter"/>
+    <addaction name="actionSharpening_Prewitt_Filter"/>
+   </widget>
+   <widget class="QMenu" name="menuExpt10">
+    <property name="title">
+     <string>Expt10</string>
+    </property>
+    <addaction name="actionCanny_Edge_Detector"/>
+   </widget>
    <addaction name="menuFile"/>
    <addaction name="menuExpt2"/>
    <addaction name="menuExpt3"/>
@@ -127,6 +149,9 @@
    <addaction name="menuExpt5"/>
    <addaction name="menuExpt7"/>
    <addaction name="menuExpt6"/>
+   <addaction name="menuExpt8"/>
+   <addaction name="menuExpt9"/>
+   <addaction name="menuExpt10"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionOpen">
@@ -134,7 +159,7 @@
     <string>Open</string>
    </property>
    <property name="shortcut">
-    <string>Ctrl+O</string>
+    <string>Ctrl+S</string>
    </property>
    <property name="shortcutContext">
     <enum>Qt::WidgetShortcut</enum>
@@ -226,6 +251,41 @@
   <action name="actionContrast_Stretching">
    <property name="text">
     <string>Contrast Stretching</string>
+   </property>
+  </action>
+  <action name="actionSmoothing_Box_Filter">
+   <property name="text">
+    <string>Smoothing: Box Filter</string>
+   </property>
+  </action>
+  <action name="actionSmoothing_Median_Filter">
+   <property name="text">
+    <string>Smoothing: Median Filter</string>
+   </property>
+  </action>
+  <action name="actionSmoothing_Weighted_Averaging_Filter">
+   <property name="text">
+    <string>Smoothing: Weighted Averaging Filter</string>
+   </property>
+  </action>
+  <action name="actionSharpening_Laplacian_Filter">
+   <property name="text">
+    <string>Sharpening : Laplacian Filter</string>
+   </property>
+  </action>
+  <action name="actionSharpening_Sobel_Filter">
+   <property name="text">
+    <string>Sharpening : Sobel Filter</string>
+   </property>
+  </action>
+  <action name="actionSharpening_Prewitt_Filter">
+   <property name="text">
+    <string>Sharpening : Prewitt Filter</string>
+   </property>
+  </action>
+  <action name="actionCanny_Edge_Detector">
+   <property name="text">
+    <string>Canny Edge Detector</string>
    </property>
   </action>
  </widget>

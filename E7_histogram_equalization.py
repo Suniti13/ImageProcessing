@@ -26,7 +26,7 @@ def histogram_eq(pil_img):
     sum_nk = np.cumsum(img_hist_arr)
     sum_pk = sum_nk/sum_nk[-1]
     sk = np.round(sum_pk*255)
-    eq_img = pil_img.point(lambda i: sk[i])
+    eq_img = pil_img.point(lambda i: int(sk[i]))
 
     new_img_hist_array = generate_histogram(eq_img)
 
