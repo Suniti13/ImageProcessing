@@ -13,6 +13,7 @@ def applyMedianFilter(img):
     return ImageQt(medianImg)
 
 def applyWeightedAvgFilter(img):
-    weightedAvgFilter = Kernel(size=(3,3), kernel=(1,2,1,2,4,2,1,2,1), scale=16)
+    weightedAvgFilter = Kernel(size=(3,3), 
+                                kernel=(1,2,1,2,4,2,1,2,1), scale=16)
     weightedAvgImg = img.filter(weightedAvgFilter)
     return ImageQt(weightedAvgImg)

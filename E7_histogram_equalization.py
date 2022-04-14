@@ -3,7 +3,6 @@ from PIL.ImageQt import ImageQt
 import numpy as np
 import matplotlib.pyplot as plt
 
-
 def generate_histogram(img):
     ''' Take PIL.Image, Return np img histogram array '''    
     img_grey = img.convert('L')
@@ -13,11 +12,11 @@ def generate_histogram(img):
 def plot_histogram(initial_hist, final_hist):
     plt.subplot(1,2,1)
     plt.bar(range(256), initial_hist)
-    plt.title("Initial Histogram")
+    plt.title("Original Histogram")
 
     plt.subplot(1,2,2)
     plt.bar(range(256), final_hist)
-    plt.title("Final Histogram")
+    plt.title("Equalized Histogram")
 
     plt.show()
 

@@ -32,7 +32,7 @@ class Ui_MainWindow(object):
         self.msgLabel.setObjectName("msgLabel")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1093, 36))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1093, 30))
         self.menubar.setObjectName("menubar")
         self.menuFile = QtWidgets.QMenu(self.menubar)
         self.menuFile.setObjectName("menuFile")
@@ -52,8 +52,6 @@ class Ui_MainWindow(object):
         self.menuExpt8.setObjectName("menuExpt8")
         self.menuExpt9 = QtWidgets.QMenu(self.menubar)
         self.menuExpt9.setObjectName("menuExpt9")
-        self.menuExpt10 = QtWidgets.QMenu(self.menubar)
-        self.menuExpt10.setObjectName("menuExpt10")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
@@ -131,7 +129,6 @@ class Ui_MainWindow(object):
         self.menuExpt9.addAction(self.actionSharpening_Laplacian_Filter)
         self.menuExpt9.addAction(self.actionSharpening_Sobel_Filter)
         self.menuExpt9.addAction(self.actionSharpening_Prewitt_Filter)
-        self.menuExpt10.addAction(self.actionCanny_Edge_Detector)
         self.menubar.addAction(self.menuFile.menuAction())
         self.menubar.addAction(self.menuExpt2.menuAction())
         self.menubar.addAction(self.menuExpt3.menuAction())
@@ -141,7 +138,6 @@ class Ui_MainWindow(object):
         self.menubar.addAction(self.menuExpt6.menuAction())
         self.menubar.addAction(self.menuExpt8.menuAction())
         self.menubar.addAction(self.menuExpt9.menuAction())
-        self.menubar.addAction(self.menuExpt10.menuAction())
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
@@ -159,9 +155,8 @@ class Ui_MainWindow(object):
         self.menuExpt7.setTitle(_translate("MainWindow", "Expt6"))
         self.menuExpt8.setTitle(_translate("MainWindow", "Expt8"))
         self.menuExpt9.setTitle(_translate("MainWindow", "Expt9"))
-        self.menuExpt10.setTitle(_translate("MainWindow", "Expt10"))
         self.actionOpen.setText(_translate("MainWindow", "Open"))
-        self.actionOpen.setShortcut(_translate("MainWindow", "Ctrl+O"))
+        self.actionOpen.setShortcut(_translate("MainWindow", "Ctrl+S"))
         self.actionSave.setText(_translate("MainWindow", "Save"))
         self.actionSave.setShortcut(_translate("MainWindow", "Ctrl+S"))
         self.actionRGB_to_Grey.setText(_translate("MainWindow", "RGB to Grey"))
@@ -187,3 +182,13 @@ class Ui_MainWindow(object):
         self.actionSharpening_Sobel_Filter.setText(_translate("MainWindow", "Sharpening : Sobel Filter"))
         self.actionSharpening_Prewitt_Filter.setText(_translate("MainWindow", "Sharpening : Prewitt Filter"))
         self.actionCanny_Edge_Detector.setText(_translate("MainWindow", "Canny Edge Detector"))
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    MainWindow = QtWidgets.QMainWindow()
+    ui = Ui_MainWindow()
+    ui.setupUi(MainWindow)
+    MainWindow.show()
+    sys.exit(app.exec_())

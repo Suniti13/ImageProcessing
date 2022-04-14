@@ -66,7 +66,7 @@
      <x>0</x>
      <y>0</y>
      <width>1093</width>
-     <height>36</height>
+     <height>30</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
@@ -136,12 +136,6 @@
     <addaction name="actionSharpening_Sobel_Filter"/>
     <addaction name="actionSharpening_Prewitt_Filter"/>
    </widget>
-   <widget class="QMenu" name="menuExpt10">
-    <property name="title">
-     <string>Expt10</string>
-    </property>
-    <addaction name="actionCanny_Edge_Detector"/>
-   </widget>
    <addaction name="menuFile"/>
    <addaction name="menuExpt2"/>
    <addaction name="menuExpt3"/>
@@ -151,7 +145,6 @@
    <addaction name="menuExpt6"/>
    <addaction name="menuExpt8"/>
    <addaction name="menuExpt9"/>
-   <addaction name="menuExpt10"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionOpen">

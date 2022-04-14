@@ -1,5 +1,6 @@
 import sys
 from PIL import Image
+from PIL.ImageQt import ImageQt
 
 from PyQt5.QtWidgets import QApplication, QDialog, QMainWindow, QMessageBox, QFileDialog
 from PyQt5.QtGui import QPixmap
@@ -15,14 +16,13 @@ from E5_bit_plane_slicing import convert_to_bit_plane_slicing
 from E6_contrast_stretching import contrast_stretching
 from E7_histogram_equalization import histogram_eq, plot_histogram
 from E8_smoothening import applyBoxFilter, applyMedianFilter, applyWeightedAvgFilter
+from E9_sharpening import applyLaplacianFilter, applySobelFilter, applyPrewittFilter
 
-#from handleImageFile import showInputImage, showOutputImage
 
 class E4_Dialog(QDialog, E4_Options):
     def __init__(self, parent=None):
         super().__init__(parent)
         self.setupUi(self)
-
     
 
 class Window(QMainWindow, Ui_MainWindow):
@@ -58,6 +58,9 @@ class Window(QMainWindow, Ui_MainWindow):
         self.actionSmoothing_Median_Filter.triggered.connect(lambda: self.medianFilter())
         self.actionSmoothing_Weighted_Averaging_Filter.triggered.connect(lambda: self.weightedAvgFilter())
 
+        self.actionSharpening_Laplacian_Filter.triggered.connect(lambda: self.laplacianFilter())
+        self.actionSharpening_Sobel_Filter.triggered.connect(lambda: self.sobelFilter())
+        self.actionSharpening_Prewitt_Filter.triggered.connect(lambda: self.prewittFilter())
 
 
     def openImage(self):
@@ -129,7 +132,7 @@ class Window(QMainWindow, Ui_MainWindow):
     #E7
     def histogramEq(self):
         self.outputImage, self.initialHist, self.finalHist = histogram_eq(self.inputImagePIL)
-        self.showOutputImage()
+        self.showOutputImage("Histogram Equalization")
     
     def plotHistogram(self):
         plot_histogram(self.initialHist, self.finalHist)
@@ -146,6 +149,20 @@ class Window(QMainWindow, Ui_MainWindow):
     def weightedAvgFilter(self):
         self.outputImage = applyWeightedAvgFilter(self.inputImagePIL)
         self.showOutputImage("Weighted Averaging Filter")
+
+    #E9 : Image Sharpening
+    def laplacianFilter(self):
+        self.outputImage = applyLaplacianFilter(self.inputImagePIL)
+        self.showOutputImage("Laplacian Filter")
+
+    def sobelFilter(self):
+        self.outputImage = applySobelFilter(self.inputImagePIL)
+        self.showOutputImage("Sobel Filter")
+    
+    def prewittFilter(self):
+        self.outputImage = applyPrewittFilter(self.inputImagePIL)
+        self.showOutputImage("Prewitt Filter")
+       
     
 
 
