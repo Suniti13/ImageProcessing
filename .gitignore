@@ -1,2 +1,6 @@
 /misc
 /__pycache__
+/.ven
+/gui/__pycache__
+/gui/guiMaincopy.ui
+/handleImageFile.py
